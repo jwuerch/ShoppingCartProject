@@ -1,5 +1,11 @@
 <ul>
   {{#each model as |product|}}
-    product.availableOnline
+    <br>
+    {{product.name}} -- ${{product.salePrice}}
+    <form>
+      {{input value=product.salePrice type='' id=product.salePrice}}
+      {{input value=product.name type='' id=product.name}}
+      <button {{action 'saveProduct'}}>Add to Cart</button>
+    </form>
   {{/each}}
 </ul>
