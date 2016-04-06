@@ -1,0 +1,14 @@
+<div>
+  <form>
+    <div class="form-group">
+      <label for="name">Name</label>
+      {{input value=product.name id=product.name}}
+    </div>
+
+    <div class="form-group">
+      <label for="salePrice">Sale Price</label>
+      {{input value=product.salePrice id=product.salePrice}}
+    </div>
+    <button {{action 'saveProduct'}}>Save</button>
+  </form>
+</div>

@@ -9,14 +9,13 @@ export default Ember.Route.extend({
     });
   },
   actions: {
-    saveProduct() {
-      var params = {
-        name: this.get('name') ? this.get('name') : "",
-        salePrice: this.get('salePrice') ? this.get('salePrice') : ""
-      }
-      console.log(this.get('name'));
-      console.log(this.get('salePrice'));
-      var newProduct = this.store.createRecord('product', params);
+    saveProduct(product) {
+      var params1 = {
+        name: product.name,
+        salePrice: product.salePrice
+      };
+      console.log(params1);
+      var newProduct = this.store.createRecord('product', params1);
       newProduct.save();
     }
   }

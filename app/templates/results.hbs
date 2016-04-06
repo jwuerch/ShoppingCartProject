@@ -2,10 +2,12 @@
   {{#each model as |product|}}
     <br>
     {{product.name}} -- ${{product.salePrice}}
-    <form>
-      {{input value=product.salePrice type='' id=product.salePrice}}
-      {{input value=product.name type='' id=product.name}}
-      <button {{action 'saveProduct'}}>Add to Cart</button>
-    </form>
+    <div>
+      <form>
+          {{input value=product.name id=product.name type="hidden"}}
+          {{input value=product.salePrice id=product.salePrice type="hidden"}}
+        <button {{action 'saveProduct' product}}>Add to Cart</button>
+      </form>
+    </div>
   {{/each}}
 </ul>
