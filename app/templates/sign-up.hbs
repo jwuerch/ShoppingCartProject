@@ -1,0 +1,21 @@
+<div class='page-header'>
+    <h1>Sign Up</h1>
+</div>
+{{input
+    type='text'
+    class='form-control'
+    value=email
+    placeholder='email'
+}}
+{{input
+    type='password'
+    class='form-control'
+    value=password
+    placeholder='password'
+}}
+<button
+    class='btn btn-default'
+    {{action 'signUp'}}
+>
+    {{fa-icon 'user-plus'}} Sign Up
+</button>  

@@ -1,0 +1,27 @@
+<div class='page-header'>
+    <h1>Sign In</h1>
+</div>
+{{input
+    type='text'
+    class='form-control'
+    value=email
+    placeholder='email'
+}}
+{{input
+    type='password'
+    class='form-control'
+    value=password
+    placeholder='password'
+}}
+{{#if session.isWorking}}
+    <button class='btn btn-default' disabled='disabled'>
+        {{fa-icon 'spinner' spin=true}} Signing in...
+    </button>
+{{else}}
+    <button
+        class='btn btn-default'
+        {{action 'signIn' 'password'}}
+    >
+        {{fa-icon 'sign-in'}} Sign In
+    </button>
+{{/if}}
