@@ -9,6 +9,7 @@ Router.map(function() {
   this.route('sign-up');
   this.route('sign-in');
   this.authenticatedRoute('welcome');
+  this.route('results', {path: '/results/:product'});
 });
 
 export default Router;
