@@ -1,9 +1,9 @@
 import Ember from 'ember';
 
 export default Ember.Service.extend({
-  items: [],
+  products: [],
 
-  add(item) {
-    this.get('items').pushObject(item);
+  add(product) {
+    this.get('products').pushObject(product);
   }
 });
