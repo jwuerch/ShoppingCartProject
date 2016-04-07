@@ -25,6 +25,9 @@ export default Ember.Route.extend({
       };
       var newProduct = this.store.createRecord('product', params1);
       newProduct.save();
+    },
+    removeFromCart(product) {
+      this.get('shoppingCart').remove(product);
     }
   }
 });
