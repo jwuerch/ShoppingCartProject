@@ -10,5 +10,17 @@
       </form>
     </div>
   {{/each}}
+
+  {{#each model.bestBuy as |product|}}
+    <br>
+    {{product.name}} -- ${{product.salePrice}}
+    <div>
+      <form>
+          {{input value=product.name id=product.name type="hidden"}}
+          {{input value=product.salePrice id=product.salePrice type="hidden"}}
+        <button {{action 'saveProduct' product}}>Add to Cart</button>
+      </form>
+    </div>
+  {{/each}}
   {{display-cart}}
 </ul>
