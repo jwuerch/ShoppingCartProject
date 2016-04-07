@@ -21,7 +21,7 @@ export default Ember.Route.extend({
        });
     });
 
-    //Saving to Database on each API call for Walmart
+    //Saving to Database on each API call for Walmart products
     Ember.$.getJSON(walmartURL).then(function(responseJSON) {
        responseJSON.items.forEach(function(item) {
          var params1 = {
