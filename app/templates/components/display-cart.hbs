@@ -1,5 +1,18 @@
-Items In Cart:
+<h2>Your cart:</h2>
+<table>
+  {{#each shoppingCart.products as |product|}}
+  <tr>
+    <td class="table-data">{{product.name}}</td>
+    <td class="table-data">${{product.salePrice}}</td>
+    <td class="table-data">
+      <form>
+        <button {{action 'removeFromCart'}}>Remove form cart</button>
+      </form>
+    </td>
 
-{{#each shoppingCart.products as |product|}}
-  {{product.name}} -- {{product.cost}}
-{{/each}}
+  </tr>
+  {{/each}}
+</table>
+<br>
+<br>
+<button {{action 'emptyCart'}} class="btn btn-primary">Empty cart</button>
