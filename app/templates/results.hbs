@@ -1,26 +1,36 @@
 <ul>
-  {{#each model.walMart as |product|}}
-    <br>
-    {{product.name}} -- ${{product.salePrice}}
-    <div>
-      <form>
-          {{input value=product.name id=product.name type="hidden"}}
-          {{input value=product.salePrice id=product.salePrice type="hidden"}}
-        <button {{action 'saveProduct' product}}>Add to Cart</button>
-      </form>
-    </div>
-  {{/each}}
+  <table>
+    {{#each model.walMart as |product|}}
+      <tr>
+        <td class="table-data"> {{product.name}} </td>
+        <td class="table-data"> ${{product.salePrice}} </td>
+        <td class="table-data">
+          <div>
+            <form>
+                {{input value=product.name id=product.name type="hidden"}}
+                {{input value=product.salePrice id=product.salePrice type="hidden"}}
+              <button {{action 'saveProduct' product}}>Add to Cart</button>
+            </form>
+          </div>
+        </td>
+      </tr>
+    {{/each}}
 
-  {{#each model.bestBuy as |product|}}
-    <br>
-    {{product.name}} -- ${{product.salePrice}}
-    <div>
-      <form>
-          {{input value=product.name id=product.name type="hidden"}}
-          {{input value=product.salePrice id=product.salePrice type="hidden"}}
-        <button {{action 'saveProduct' product}}>Add to Cart</button>
-      </form>
-    </div>
-  {{/each}}
+    {{#each model.bestBuy as |product|}}
+      <tr>
+      <td class="table-data"> {{product.name}} </td>
+      <td class="table-data"> ${{product.salePrice}} </td>
+      <td class="table-data">
+        <div>
+          <form>
+              {{input value=product.name id=product.name type="hidden"}}
+              {{input value=product.salePrice id=product.salePrice type="hidden"}}
+            <button {{action 'saveProduct' product}}>Add to Cart</button>
+          </form>
+        </div>
+      </td>
+      </tr>
+    {{/each}}
+  </table>
   {{display-cart}}
 </ul>
