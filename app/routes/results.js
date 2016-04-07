@@ -9,7 +9,7 @@ export default Ember.Route.extend({
     var bestbuyURL = 'https://api.bestbuy.com/v1/products(search=' + params.product + ')?format=json&show=sku,name,salePrice&apiKey=8wd6evarbuf826pkknt76e39';
 
     var store = this.store;
-    //Saving to Database on each API call for BestBuy
+    //Saving to Database on each API call for BestBuy products
     Ember.$.getJSON(bestbuyURL).then(function(responseJSON) {
        responseJSON.products.forEach(function(product) {
          var params1 = {
