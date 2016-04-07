@@ -7,12 +7,22 @@ export default Ember.Route.extend({
     //API Urls
     var walmartURL = 'http://api.walmartlabs.com/v1/search?query=' + params.product + '&format=json&facet=on&apiKey=xekjrbwbrgm7822sk58zbxtg';
     var bestbuyURL = 'https://api.bestbuy.com/v1/products(search=' + params.product + ')?format=json&show=sku,name,salePrice&apiKey=8wd6evarbuf826pkknt76e39';
-    console.log(this.store.query('product', { filter: { name: 3.27 } })
-    .then(function(element) {
-
-      console.log(element.content[0]._data.name);
-    }));
     var store = this.store;
+      var x = function(arg) {
+        (store.query('product', { filter: { name: "" } })
+      .then(function(element) {
+
+        return(element.content.forEach(function(element2) {
+          if (element2._data.name === arg.name) {
+            console.log('same');
+          } else {
+            var newProduct = store.createRecord('product', arg)
+            newProduct.save();
+          };
+        }));
+      }));
+    }
+    console.log(x);
     //Saving to Database on each API call for BestBuy products
     Ember.$.getJSON(bestbuyURL).then(function(responseJSON) {
        responseJSON.products.forEach(function(product) {
@@ -20,8 +30,9 @@ export default Ember.Route.extend({
            name: product.name,
            salePrice: product.salePrice
          };
+         x(params1);
          var newProduct = store.createRecord('product', params1);
-         newProduct.save();
+        //  newProduct.save();
        });
     });
 
@@ -33,7 +44,7 @@ export default Ember.Route.extend({
            salePrice: item.salePrice
          };
          var newProduct = store.createRecord('product', params1);
-         newProduct.save();
+        //  newProduct.save();
        });
     });
 
