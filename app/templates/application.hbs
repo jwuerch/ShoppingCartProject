@@ -21,6 +21,7 @@
             >
                 {{fa-icon 'sign-out'}} Sign Out
             </button>
+            <li><div class="cart-wrap">{{#link-to 'results'}}<i class="fa fa-shopping-cart"></i><span class="shopping-cart-length">{{shoppingCart.products.length}}</span>{{/link-to}}</div></li>
         {{else}}
         <li>{{#link-to 'sign-in'}}Sign-in{{/link-to}}</li>
         <li>{{#link-to 'sign-up' class=""}}Sign-up{{/link-to}}</li>
