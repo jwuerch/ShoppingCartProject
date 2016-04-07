@@ -1,12 +1,12 @@
 <h2>Your cart:</h2>
 <table>
-  {{#each shoppingCart.products as |product|}}
+  {{#each shoppingCart.products as |product index|}}
   <tr>
     <td class="table-data">{{product.name}}</td>
     <td class="table-data">${{product.salePrice}}</td>
     <td class="table-data">
       <form>
-        <button {{action 'removeFromCart' product}}>Remove</button>
+        <button {{action 'removeFromCart' index}}>Remove</button>
       </form>
     </td>
 
@@ -16,3 +16,7 @@
 <br>
 <br>
 <button {{action 'emptyCart'}} class="btn btn-primary">Empty cart</button>
+<br>
+Total: {{total-price shoppingCart.products}}
+<br>
+<br>

@@ -4,10 +4,10 @@ export default Ember.Component.extend({
   shoppingCart: Ember.inject.service(),
   actions: {
     emptyCart() {
-      this.set('shoppingCart', []);
+      this.get('shoppingCart').empty();
     },
-    removeFromCart(product) {
-      this.sendAction('removeFromCart', product);
+    removeFromCart(index) {
+      this.get('shoppingCart').remove(index);
     }
   }
 });

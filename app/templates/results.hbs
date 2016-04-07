@@ -7,7 +7,7 @@
     </th>
     {{#each model.walMart as |product|}}
       <tr>
-        <td class="table-data"> {{product.name}} </td>
+        <td class="table-data">{{#link-to 'product' product_id}}{{product.name}}{{/link-to}}</td>
         <td class="table-data"> ${{product.salePrice}} </td>
         <td class="table-data">
           <div>
@@ -37,5 +37,5 @@
       </tr>
     {{/each}}
   </table>
-  {{display-cart  removeFromCart="removeFromCart" product=product}}
+  {{display-cart}}
 </ul>
