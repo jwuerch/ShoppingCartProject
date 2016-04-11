@@ -1,7 +1,7 @@
-# Day68-ember-two-day
+# Ember Shopping Cart
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+## Description
+Pull information from APIs and automatically save them to the database. Ability to add products to a cart and remove them. Working to be a price comparison app.
 
 ## Prerequisites
 
@@ -50,4 +50,8 @@ Specify what it takes to deploy your app.
 * Development Browser Extensions
   * [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
   * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
+
+## License
+
+_Written by Jason Wuerch. Please ask permission to use._
 
