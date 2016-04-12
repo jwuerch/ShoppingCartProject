@@ -17,6 +17,131 @@
   margin-right:10px;
 }
 
-.table-data {
-  padding:5px;
+.sidebar-left {
+  border:1px solid #000;
+  width:200px !important;
+  height:1000px;
+  min-width:200px;
+}
+
+.container-fluid {
+  padding: 0;
+}
+.main {
+  padding-left:25px;
+  padding-right:20px;
+  display: flex;
+  flex-direction:row;
+  flex-wrap:nowrap;
+}
+
+.sidebar-right {
+  width:320px;
+  height:500px;
+  border: 1px solid #000;
+}
+
+.product-container {
+  display:flex;
+  flex-direction:row;
+  flex-wrap:wrap;
+}
+
+.img-wrap {
+  text-align:center;
+  margin-bottom:10px;
+}
+
+.product-store {
+  margin-bottom:5px;
+  font-size:11px;
+  color:#999;
+  padding-left:15px;
+  padding-right:15px;
+}
+
+.product-box {
+  padding-top:10px;
+  width:170px;
+  margin-right:20px;
+  height:300px;
+  border: 1px solid #d1d1d1;
+  box-shadow: rgba(0,0,0, 0.0980392) 0px 3px 12px 1px;
+  margin-bottom:20px;
+  font-family: "Open Sans Semibold", "Open Sans", Arial, sans-serif;
+  font-size:11.5px;
+}
+
+.content {
+  display:flex;
+  flex-direction:row;
+  flex-wrap:nowrap;
+}
+
+.sidebar-right {
+  min-width:300px;
+  max-width:300px;
+}
+
+.product-name {
+  border-bottom: 1px solid #d1d1d1;
+  height:70px;
+  padding-left:15px;
+  padding-right:15px;
+}
+
+.product-likes {
+  border: 1px solid #d1d1d1;
+  border-bottom:none;
+  height:40px;
+  width:50%;
+  padding:7px;
+  text-align:center;
+  border-left:none;
+}
+
+.product-comments {
+  border-top: 1px solid #d1d1d1;
+  height:40px;
+  width:50%;
+  padding:7px;
+  text-align:center;
+  border-right:none;
+}
+
+.product-likes-and-comments {
+  display:flex;
+  flex-wrap:nowrap;
+}
+
+.product-sale-price {
+  padding-left:15px;
+  padding-right:15px;
+  margin-top:10px;
+  font-size:14px;
+  font-weight:700;
+  color:#60a430;
+  height:30px;
+  margin-bottom:10px;
+}
+
+.thumbs-up-and-down {
+  display:flex;
+}
+
+.thumbs-up-wrap {
+  width:50%;
+  border-right:1px solid #d1d1d1;
+}
+
+.thumbs-down-wrap {
+  width:50%;
+}
+
+.fa-thumbs-up:hover {
+  color:blue;
+}
+
+.fa-thumbs-down:hover {
+  color:red;
 }
