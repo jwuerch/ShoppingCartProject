@@ -51,7 +51,7 @@ export default Ember.Route.extend({
     //Models that we can use on results.hbs
     return Ember.RSVP.hash({
       bestBuy: Ember.$.getJSON(bestbuyURL).then(function(responseJSON) {
-        console.log(responseJSON.products);
+        // console.log(responseJSON.products);
         return responseJSON.products;
       }),
       walMart: Ember.$.getJSON(walmartURL).then(function(responseJSON) {
