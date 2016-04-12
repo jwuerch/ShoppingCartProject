@@ -10,7 +10,7 @@ Router.map(function() {
   this.route('sign-in');
   this.authenticatedRoute('welcome');
   this.route('results', {path: '/results/:product'});
-  this.route('product', {path: 'product/:product'});
+  this.route('product', {path: '/product/:product_id'});
   this.route('cart.js');
   this.route('cart');
 });

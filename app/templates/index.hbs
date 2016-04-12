@@ -3,3 +3,10 @@ Index Template
 <div class="page-header">
   {{product-search productLookup="productLookup"}}
 </div>
+<hr />
+<h2>Join A Product Discussion!</h2>
+<ul>
+{{#each model as |discussion|}}
+<li>{{#link-to 'product' discussion}}{{discussion.product}}{{/link-to}}</li>
+{{/each}}
+</ul>
