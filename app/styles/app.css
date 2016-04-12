@@ -18,10 +18,12 @@
 }
 
 .sidebar-left {
-  border:1px solid #000;
+  border:1px solid #d9d9d9;
   width:200px !important;
   height:1000px;
   min-width:200px;
+  padding:15px;
+  box-shadow: rgba(0,0,0, 0.0980392) 0px 3px 12px 1px;
 }
 
 .container-fluid {
@@ -45,6 +47,7 @@
   display:flex;
   flex-direction:row;
   flex-wrap:wrap;
+  margin-left:25px;
 }
 
 .img-wrap {
@@ -134,6 +137,32 @@
   border-right:1px solid #d1d1d1;
 }
 
+.price-filter-wrap {
+  display: flex;
+  flex-wrap: nowrap;
+  width:140px;
+  margin-bottom:7px;
+}
+
+.number-low {
+  width:50%;
+  margin-right: 10px;
+}
+
+.price-dash {
+  font-size: 20px;
+}
+
+.number-high {
+  width:50%;
+  margin-left:10px;
+}
+
+.price-go-btn {
+  font-weight:700;
+  font-size:11px;
+}
+
 .thumbs-down-wrap {
   width:50%;
 }
@@ -144,4 +173,22 @@
 
 .fa-thumbs-down:hover {
   color:red;
+}
+
+.filter-widget {
+  margin-bottom:20px;
+}
+
+.filter-widget-title {
+  color: #333;
+  font-weight:700;
+  font-family: arial, sans-serif;
+  font-size:13px;
+}
+
+.radio-text {
+  font-family: arial, sans-serif;
+  font-size:13px;
+  margin-left:5px;
+  color:#666;
 }

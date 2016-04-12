@@ -31,7 +31,29 @@
   </nav>
   <div class="container-fluid main">
     <div class="sidebar-left">
-      Sidebar Left
+      <div class="filter-widget">
+        <div class="filter-widget-title">
+          <p>Price</p>
+        </div>
+        <div class="price-filter-wrap">
+          <input class="number-low" type="number" placeholder="Min"><span class="price-dash">-</span>
+          <input class="number-high" type="number" placeholder="Max">
+        </div>
+        <button class="price-go-btn">Go</button>
+      </div>
+
+      <div class="filter-widget">
+        <div class="filter-widget-title">
+          <p>Search by category</p>
+        </div>
+        <form action="">
+          <input type="radio" name="gender" value="male"><span class="radio-text"> Electronics</span><br>
+          <input type="radio" name="gender" value="female"><span class="radio-text"> Furniture</span><br>
+          <input type="radio" name="gender" value="other"><span class="radio-text"> Printers</span>
+        </form>
+
+
+      </div>
     </div>
 
 
@@ -43,7 +65,6 @@
 
 
       <div class="sidebar-right">
-        Sidebar Right
       </div>
 
     </div>
