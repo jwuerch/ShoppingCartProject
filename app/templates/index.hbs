@@ -7,6 +7,8 @@ Index Template
 <h2>Join A Product Discussion!</h2>
 <ul>
 {{#each model as |discussion|}}
+<div class = "discussion">
 <li>{{#link-to 'product' discussion}}{{discussion.product}}{{/link-to}}</li>
+</div>
 {{/each}}
 </ul>
