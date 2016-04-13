@@ -288,6 +288,10 @@
   width:50%;
 }
 
+.fa-cart-plus:hover {
+  color:blue;
+}
+
 .fa-thumbs-up:hover {
   color:blue;
 }
