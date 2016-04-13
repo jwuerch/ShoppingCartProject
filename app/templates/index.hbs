@@ -1,14 +1,47 @@
-{{navbar-index}}
 
-<div class="page-header">
-  {{product-search productLookup="productLookup"}}
+
+
+    <div class="container-fluid">
+      <div class="index-search jumbotron">
+        <div class="row" style="height:500px;">
+          <div class="col-sm-6">
+            <img src="http://www.1designshop.com/wp-content/uploads/2016/02/1dsp-20160207-sh002.png" style="">
+          </div>
+          <div class="col-sm-6" id="second-column-header">
+              <div class="above-search-bar-index">
+                Shop smart - Not hard.
+              </div>
+              <br>
+              <br>
+                {{product-search productLookup="productLookup"}}
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+
+
+
+
+<hr/>
+<div class="container" style="text-align:center;">
+  <div class="row" style="text-align:center;">
+    <div class="col-sm-12" style="text-align:center;">
+
+
+      <div class="above-search-bar-index-2 h2-row-2">Product discussions!</div>
+      <br>
+      <br>
+      <br>
+      <ul style="padding-left:0;">
+        {{#each model as |discussion|}}
+          {{#link-to 'discuss' discussion}}{{discussion.product}}{{/link-to}}
+          {{discussion.description}}
+          <br>
+          <hr>
+        {{/each}}
+      </ul>
+    </div>
+  </div>
 </div>
-<hr />
-<h2>Join A Product Discussion!</h2>
-<ul>
-{{#each model as |discussion|}}
-<div class = "discussion">
-<li>{{#link-to 'discuss' discussion}}{{discussion.product}}{{/link-to}}</li>
-</div>
-{{/each}}
-</ul>
