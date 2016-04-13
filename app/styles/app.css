@@ -24,3 +24,9 @@
 .discussion {
   border: 1px solid black;
 }
+
+.authorImage {
+  height: 50px;
+  width: 50px;
+  border-radius: 80%;
+}

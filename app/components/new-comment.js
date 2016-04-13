@@ -2,7 +2,6 @@ import Ember from 'ember';
 
 export default Ember.Component.extend({
   firebase: Ember.inject.service(),
-  userImage: "hey",
 
   actions: {
     saveComment() {
@@ -10,6 +9,8 @@ export default Ember.Component.extend({
       console.log(firebase);
       console.log(this.get('session'))
       var author = firebase.repo.auth.authData_.password.email
+      var newImage = firebase.repo.auth.authData_.password.profileImageURL
+
       var splitAuthor = author.split('');
       var newName = '';
 
@@ -22,6 +23,7 @@ export default Ember.Component.extend({
       }
       var params = {
         author: newName,
+        authorImage: newImage,
         content: this.get('content'),
         discuss: this.get('discuss')
       };

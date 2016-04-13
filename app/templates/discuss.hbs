@@ -10,8 +10,8 @@
 
 {{#each model.comments as |comment|}}
 <p>Comment: {{comment.content}}</p>
-<p>Author: {{comment.author}}</p> -->
-<!-- <p>Pic: {{userImage}}</p> -->
+<p>Author: {{comment.author}}</p>
+<p>Pic: <img class = "authorImage" src='{{comment.authorImage}}'></p>
 
 <hr />
 {{/each}}
