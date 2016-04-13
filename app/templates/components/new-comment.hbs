@@ -1,9 +1,7 @@
 <form>
   <div class="form-group">
-    {{input value=author id="author"}}
+    {{input value=content id="content" placeholder = "comment"}}
   </div>
-
-  <div class="form-group">
-    {{input value=content id="content"}}
-  </div>
+  <button class = "btn btn-success"{{action 'saveComment'}}>Post Comment</button>
+  {{userImage}}
 </form>

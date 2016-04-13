@@ -1,3 +1,4 @@
+
 {{navbar-api-search}}
   <div class="container-fluid main">
 <div class="sidebar-left">
@@ -68,7 +69,9 @@
           </div>
         </div>
         <div class="product-comments">
-          <i class="fa fa-comment" aria-hidden="true" style="font-size:18px;"></i>
+          {{new-discuss model=product newDiscuss="newDiscuss"}}
+          <!-- <i class="fa fa-comment" aria-hidden="true" style="font-size:18px;"></i> -->
+
         </div>
       </div>
     </div>
@@ -100,7 +103,9 @@
           </div>
         </div>
         <div class="product-comments">
-          <i class="fa fa-comment" aria-hidden="true" style="font-size:18px;"></i>
+          {{new-discuss model=product newDiscuss="newDiscuss"}}
+
+          <!-- <i class="fa fa-comment" aria-hidden="true" style="font-size:18px;"></i> -->
         </div>
       </div>
     </div>

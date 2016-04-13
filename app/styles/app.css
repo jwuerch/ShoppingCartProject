@@ -236,6 +236,9 @@
   margin-bottom:20px;
 }
 
+.fa-comment:hover {
+  color:#00FF00;
+}
 .filter-widget-title {
   color: #333;
   font-weight:700;
@@ -248,4 +251,14 @@
   font-size:13px;
   margin-left:5px;
   color:#666;
+}
+
+.discussion {
+  border: 1px solid black;
+}
+
+.authorImage {
+  height: 50px;
+  width: 50px;
+  border-radius: 80%;
 }

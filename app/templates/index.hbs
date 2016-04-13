@@ -3,3 +3,12 @@
 <div class="page-header">
   {{product-search productLookup="productLookup"}}
 </div>
+<hr />
+<h2>Join A Product Discussion!</h2>
+<ul>
+{{#each model as |discussion|}}
+<div class = "discussion">
+<li>{{#link-to 'discuss' discussion}}{{discussion.product}}{{/link-to}}</li>
+</div>
+{{/each}}
+</ul>
