@@ -15,6 +15,7 @@ export default Ember.Controller.extend({
           this.set('registerOne', false);
           controller.set('email', null);
           controller.set('password', null);
+          this.transitionToRoute('sign-in');
         }
       });
     }
