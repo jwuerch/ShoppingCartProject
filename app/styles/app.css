@@ -13,6 +13,8 @@
   left:17px;
 }
 
+
+
 .cart-wrap {
   margin-right:10px;
 }
@@ -80,28 +82,8 @@
   font-size:11.5px;
 }
 
-.search-bar-api-wrap {
-  margin: 0 auto;
-  position: relative;
-  top: 50%;
-  transform: translateY(-50%);
-  width:300px;
-}
+.api-search-nav {
 
-.navbar-header {
-  display:flex;
-  flex-direction: row;
-  justify-content: center;
-}
-
-.search-bar-api {
-  border-radius:15px !important;
-}
-
-.search-bar-wrap {
-  text-align: center;
-  width:auto;
-  height:50px;
 }
 
 .content {
