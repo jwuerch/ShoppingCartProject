@@ -1,19 +1,71 @@
 .fa-shopping-cart {
-  font-size: 3em;
+  font-size: 40px !important;
   position: relative;
-  top:2px;
+  top:0px;
   color:#000;
 }
 
+.jumbotron {
+  padding: 0px;
+
+}
+
+
+
+.collapse navbar-collapse {
+  height:60px !important;
+}
+
+
+.index-search-wrap {
+  position:relative;
+  top:-300px;
+  background:#333;
+  width:550px;
+  margin:0 auto;
+  height:150px;
+  background: #000;
+  opacity: .5;
+}
+
+.jumbotron {
+  padding:0px !important;
+  background: url("https://media.gucci.com/content/CategoryHeroHeaderStandard_1600x533/1447248605/CategoryHeroHeaderStandard_s61-gift-children_001_Default.jpg");
+  text-align: center;
+}
+
+.product-search-wrap {
+  align-items: center;
+
+
+}
+
+.navbar-container-fluid {
+  height:50px !important;
+}
+.col-xs-12 {
+  padding-left:0;
+  padding-right:0;
+}
+
+.index-row-1 {
+  margin:0px !important;
+}
+
+.fa-shopping-cart:hover {
+  color:#444;
+}
+
 .shopping-cart-length {
-  font-size:16px;
+  font-size:15px;
   color: #fff;
   position:absolute;
-  top:7px;
+  top:10px;
   left:17px;
 }
 .cart-wrap {
   margin-right:10px;
+  margin-top:5px;
 }
 
 .banner {
@@ -36,11 +88,11 @@
   margin-top:2.5px;
 }
 
-.navbar-default .navbar-nav > li > a {
+.navbar-default .navbar-nav {
   color: #788a91;
   font-family:"ProximaNova-Bold",Helvetica,Arial,sans-serif;
   font-weight:700;
-  font-size:12px;
+  font-size:11px;
   letter-spacing: 1px;
 }
 
@@ -66,11 +118,23 @@
   box-shadow: rgba(0,0,0, 0.0980392) 0px 3px 12px 1px;
 }
 
+.index-row-1 {
+  margin:25px;
+  margin-top:50px;
+  text-align:center;
+}
+
+.navbar-default .navbar-nav > li > a:hover {
+  color: #337ab7;
+}
+
 .api-search-nav {
   background: #f6f8f7 url(//d36cmr08aasnby.cloudfront.net/assets/magnifying-glass-7801789c047a6aeb44fe2d1f4eef8865.png) 5% 50% no-repeat;
   border-radius:15px;
-  padding-left: 50px;
+  padding-left: 40px;
   padding-right:40px;
+  font-weight:400;
+  font-size:12px !important;
 }
 
 .container-fluid {

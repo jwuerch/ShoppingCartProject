@@ -1,45 +1,42 @@
-<div class="container-fluid">
+<div class="container-fluid navbar-container-fluid">
   <nav class="navbar navbar-default">
-    <div class="container-fluid">
-      <div class="navbar-wrap" style="display: flex;flex:wrap;">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
+    <div class="container-fluid navbar-within-container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">{{#link-to 'index'}}<img src="/assets/images/cartmagic_logo.png" class="banner">{{/link-to}}</a>
+      </div>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <form class="search-form navbar-left" role="search" style="width:200px">
+            <div class="form-group search-input-wrap" style="position:relative;top:2.5px;">
+              <input type="text" class="form-control api-search-nav" placeholder="Search for product...">
+            </div>
+          </form>
+          <li class=""><a href="#">HOT DEALS <span class="sr-only">(current)</span></a></li>
+          <li><a href="#">DISCUSSIONS</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          {{#if session.isAuthenticated}}
+          <button class='btn btn-default navbar-btn'{{action 'signOut'}}>
+            {{fa-icon 'sign-out'}} Sign Out
           </button>
-          <a class="navbar-brand" href="#">{{#link-to 'index'}}<img src="/assets/images/cartmagic_logo.png" class="banner">{{/link-to}}</a>
-
-        </div>
-        <form class="search-form" role="search" style="width:300px">
-          <div class="form-group search-input-wrap" style="position:relative;top:6.25px;">
-            <input type="text" class="form-control api-search-nav" placeholder="Search for product...">
-          </div>
-        </form>
-
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-          <ul class="nav navbar-nav">
-          </ul>
-          <ul class="nav navbar-nav navbar-right">
-            {{#if session.isAuthenticated}}
-            <button class='btn btn-default navbar-btn'{{action 'signOut'}}>
-              {{fa-icon 'sign-out'}} Sign Out
-            </button>
-            <li><div class="cart-wrap">{{#link-to 'cart'}}<i class="fa fa-shopping-cart"></i><span class="shopping-cart-length">{{shoppingCart.products.length}}</span>{{/link-to}}</div></li>
-            {{else}}
-            <li>{{#link-to 'sign-in'}}SIGN-IN{{/link-to}}</li>
-            <li>{{#link-to 'sign-up' class=""}}SIGN-UP{{/link-to}}</li>
-            {{/if}}
-          </ul>
-        </div><!-- /.navbar-collapse -->
-      </div><!-- /navbar-wrap -->
-
-
+          {{else}}
+          <li>{{#link-to 'sign-in'}}SIGN-IN{{/link-to}}</li>
+          <li>{{#link-to 'sign-up' class=""}}SIGN-UP{{/link-to}}</li>
+          {{/if}}
+          <li><div class="cart-wrap">{{#link-to 'cart'}}<i class="fa fa-shopping-cart"></i><span class="shopping-cart-length">{{shoppingCart.products.length}}</span>{{/link-to}}</div></li>
+        </ul>
+      </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
   </nav>
 </div>
-
 
 {{outlet}}

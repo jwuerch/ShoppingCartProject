@@ -1,9 +1,20 @@
-{{navbar-index}}
 
-<div class="page-header">
-  {{product-search productLookup="productLookup"}}
-</div>
-<hr />
+
+
+    <div class="container-fluid">
+      <div class="index-search jumbotron">
+        <div class="index-search-wrap">
+        </div>
+        <div class="product-search-wrap">
+          {{product-search productLookup="productLookup"}}
+        </div>
+      </div>
+    </div>
+
+
+
+
+<hr/>
 <h2>Join A Product Discussion!</h2>
 <ul>
 {{#each model as |discussion|}}
