@@ -232,3 +232,11 @@
   width: 50px;
   border-radius: 80%;
 }
+
+.selectpicker {
+   width: 240px;
+   height: 34px;
+   overflow: hidden;
+   background: url('http://bavotasan.com/wp-content/uploads/2011/05/down_arrow_select.jpg') no-repeat right #ddd;
+   border: 1px solid #ccc;
+   }

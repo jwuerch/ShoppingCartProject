@@ -1,5 +1,15 @@
 <form>
-{{input value=category id="category" placeholder = "category"}}
+{{#x-select class="selectpicker" value=category}}
+  {{#x-option value="Outdoor"}}Outdoor{{/x-option}}
+  {{#x-option value="Health"}}Health{{/x-option}}
+  {{#x-option value="Apparel"}}Apparel{{/x-option}}
+  {{#x-option value="Household"}}Household{{/x-option}}
+  {{#x-option value="Fitness"}}Fitness{{/x-option}}
+  {{#x-option value="Office"}}Office{{/x-option}}
+  {{#x-option value="Electronics"}}Electronics{{/x-option}}
+{{/x-select}}
+<!-- {{input value=category id="category" placeholder = "category"}} -->
+
 {{input value=notes id="notes" placeholder = "notes"}}
 <button {{action 'updateDiscuss' discuss}}>update</button>
 </form>
