@@ -1,10 +1,6 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
-  firebase: Ember.inject.service(),
-
-
-
   model(params) {
     // debugger;
     return this.store.findRecord('discuss', params.discuss_id);
@@ -20,15 +16,6 @@ export default Ember.Route.extend({
       newComment.save().then(function () {
         return discuss.save();
       })
-    },
-    updateDiscuss(discuss, params){
-      Object.keys(params).forEach(function(key) {
-        if (params[key]!==undefined) {
-          discuss.set(key, params[key]);
-        }
-      });
-      discuss.save();
-      this.transitionTo('discuss', discuss)
-    },
+    }
   }
 });

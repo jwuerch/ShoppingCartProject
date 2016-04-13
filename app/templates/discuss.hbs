@@ -1,0 +1,17 @@
+<h1>Welcome to your FULL discussion page</h1>
+<li>{{model.product}}</li>
+<li>{{model.price}}</li>
+<li>{{model.category}}</li>
+<li>{{model.image}}</li>
+<li>{{model.description}}</li>
+<li>{{model.notes}}</li>
+
+{{new-comment discuss=model saveComment="saveComment"}}
+
+{{#each model.comments as |comment|}}
+<p>Comment: {{comment.content}}</p>
+<p>Author: {{comment.author}}</p> -->
+<!-- <p>Pic: {{userImage}}</p> -->
+
+<hr />
+{{/each}}

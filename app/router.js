@@ -13,6 +13,7 @@ Router.map(function() {
   this.route('product', {path: '/product/:product_id'});
   this.route('cart.js');
   this.route('cart');
+  this.route('discuss', {path: 'product/discuss/:discuss_id'});
 });
 
 export default Router;
