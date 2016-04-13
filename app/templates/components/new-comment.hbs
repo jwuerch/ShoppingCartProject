@@ -1,7 +1,6 @@
 <form>
   <div class="form-group">
-    {{input value=content id="content" placeholder = "comment"}}
+    {{textarea value=content id="content" placeholder = "If you're logged in, feel free to start a discussion here!"}}
   </div>
-  <button class = "btn btn-success"{{action 'saveComment'}}>Post Comment</button>
-  {{userImage}}
+  <button class = "btn btn-success margin"{{action 'saveComment'}}>Post Comment</button>
 </form>
