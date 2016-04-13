@@ -1,42 +1,117 @@
-<ul>
-  <table>
-    <th>
-      <td>Item</td>
-      <td>Price</td>
-      <td>Add</td>
-    </th>
-    {{#each model.walMart as |product|}}
-      <tr>
-        <td class="table-data">{{#link-to 'product' product_id}}{{product.name}}{{/link-to}}</td>
-        <td class="table-data"> ${{product.salePrice}} </td>
-        <td class="table-data">
-          <div>
-            <form>
-                {{input value=product.name id=product.name type="hidden"}}
-                {{input value=product.salePrice id=product.salePrice type="hidden"}}
-              <button {{action 'saveProduct' product}}>Add to Cart</button>
-                {{new-discuss model=product newDiscuss="newDiscuss"}}
-            </form>
-          </div>
-        </td>
-      </tr>
-    {{/each}}
 
-    <!-- {{#each model.bestBuy as |product|}}
-      <tr>
-      <td class="table-data"> {{product.name}} </td>
-      <td class="table-data"> ${{product.salePrice}} </td>
-      <td class="table-data">
-        <div>
-          <form>
-              {{input value=product.name id=product.name type="hidden"}}
-              {{input value=product.salePrice id=product.salePrice type="hidden"}}
-            <button {{action 'saveProduct' product}}>Add to Cart</button>
-          </form>
+{{navbar-api-search}}
+  <div class="container-fluid main">
+<div class="sidebar-left">
+  <div class="filter-widget">
+    <div class="filter-widget-title">
+      <p>Price</p>
+    </div>
+    <div class="price-filter-wrap">
+      <input class="number-low" type="number" placeholder="Min"><span class="price-dash">-</span>
+      <input class="number-high" type="number" placeholder="Max">
+    </div>
+    <button class="price-go-btn">Go</button>
+  </div>
+
+  <div class="filter-widget">
+    <div class="filter-widget-title">
+      <p>Search by category</p>
+    </div>
+    <form action="">
+      <input type="radio"><span class="radio-text"> Electronics</span><br>
+      <input type="radio"><span class="radio-text"> Furniture</span><br>
+      <input type="radio"><span class="radio-text"> Printers</span>
+      <div class="a-tag-more">
+        <a href="#">More...</a>
+      </div>
+    </form>
+  </div>
+
+  <div class="filter-widget">
+    <div class="filter-widget-title">
+      <p>Filter by store</p>
+    </div>
+    <form action="">
+      <input type="checkbox"><span class="radio-text"> Best Buy</span><br>
+      <input type="checkbox"><span class="radio-text"> Amazon</span><br>
+      <input type="checkbox"><span class="radio-text">Walmart</span>
+      <div class="a-tag-more">
+        <a href="#">More...</a>
+      </div>
+    </form>
+  </div>
+
+</div>
+<div class="content">
+  {{#each model.walMart as |product|}}
+    <div class="product-box">
+      <div class="img-wrap">
+        <img src={{product.imageEntities.[0].thumbnailImage}}>
+      </div>
+      <div class="product-store">
+        <em>Walmart</em>
+      </div>
+      <div class="product-name">
+        {{product.name}}
+      </div>
+      <div class="product-sale-price">
+        ${{product.salePrice}}
+      </div>
+      <div class="product-likes-and-comments">
+        <div class="product-likes">
+          <div class="thumbs-up-and-down">
+            <div class="thumbs-up-wrap">
+              <i class="fa fa-thumbs-up" aria-hidden="true" style="font-size:18px;"></i>
+            </div>
+            <div class="thumbs-down-wrap">
+              <i class="fa fa-thumbs-down" aria-hidden="true" style="font-size:18px;"></i>
+            </div>
+          </div>
         </div>
-      </td>
-      </tr>
-    {{/each}} -->
-  </table>
-  {{display-cart}}
-</ul>
+        <div class="product-comments">
+          {{new-discuss model=product newDiscuss="newDiscuss"}}
+          <!-- <i class="fa fa-comment" aria-hidden="true" style="font-size:18px;"></i> -->
+
+        </div>
+      </div>
+    </div>
+  {{/each}}
+
+  {{#each model.bestBuy as |product|}}
+    <div class="product-box">
+      <div class="img-wrap">
+        <img src={{product.imageEntities.[0].thumbnailImage}}>
+      </div>
+      <div class="product-store">
+        <em>Best Buy</em>
+      </div>
+      <div class="product-name">
+        {{product.name}}
+      </div>
+      <div class="product-sale-price">
+        ${{product.salePrice}}
+      </div>
+      <div class="product-likes-and-comments">
+        <div class="product-likes">
+          <div class="thumbs-up-and-down">
+            <div class="thumbs-up-wrap">
+              <i class="fa fa-thumbs-up" aria-hidden="true" style="font-size:18px;"></i>
+            </div>
+            <div class="thumbs-down-wrap">
+              <i class="fa fa-thumbs-down" aria-hidden="true" style="font-size:18px;"></i>
+            </div>
+          </div>
+        </div>
+        <div class="product-comments">
+          {{new-discuss model=product newDiscuss="newDiscuss"}}
+
+          <!-- <i class="fa fa-comment" aria-hidden="true" style="font-size:18px;"></i> -->
+        </div>
+      </div>
+    </div>
+  {{/each}}
+</div>
+
+<div class="sidebar-right">
+</div>
+</div>
