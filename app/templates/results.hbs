@@ -77,7 +77,9 @@
     </div>
   {{/each}}
 
-  {{#each model.bestBuy as |product|}}
+
+{{sorted-products model=model.bestBuy newDiscuss="newDiscuss"}}
+  <!-- {{#each model.bestBuy as |product|}}
     <div class="product-box">
       <div class="img-wrap">
         <img src={{product.imageEntities.[0].thumbnailImage}}>
@@ -104,14 +106,12 @@
         </div>
         <div class="product-comments">
           {{new-discuss model=product newDiscuss="newDiscuss"}}
-
-          <!-- <i class="fa fa-comment" aria-hidden="true" style="font-size:18px;"></i> -->
         </div>
       </div>
     </div>
-  {{/each}}
+  {{/each}} -->
 </div>
 
-<div class="sidebar-right">
-</div>
+  <div class="sidebar-right">
+  </div>
 </div>
