@@ -12,16 +12,26 @@
   top:7px;
   left:17px;
 }
-
-
-
 .cart-wrap {
   margin-right:10px;
+}
+
+.banner {
+  height:45px;
+  top:50%;
+  position:relative;
+  transform: translateY(-50%);
+
 }
 
 .navbar-default {
   padding-left:25px;
   padding-right:25px;
+  border-radius:0;
+}
+
+.navbar {
+  background: #fff;
 }
 
 .sidebar-left {
@@ -80,10 +90,6 @@
   margin-bottom:20px;
   font-family: "Open Sans Semibold", "Open Sans", Arial, sans-serif;
   font-size:11.5px;
-}
-
-.api-search-nav {
-
 }
 
 .content {
