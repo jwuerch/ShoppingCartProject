@@ -7,6 +7,20 @@ export default Ember.Route.extend({
   actions: {
     productLookup(params) {
       this.transitionTo('results', params.product);
+    },
+    upVote(discussion) {
+      var currentRank = discussion.get('rank');
+      currentRank++;
+      discussion.set('rank', currentRank);
+      discussion.save();
+    },
+    downVote(discussion) {
+      if (discussion.get('rank') !== 0) {
+        var currentRank = discussion.get('rank');
+        currentRank--;
+        discussion.set('rank', currentRank);
+        discussion.save();
+      }
     }
   }
 });
