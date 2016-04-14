@@ -6,8 +6,6 @@ export default Ember.Component.extend({
   actions: {
     newDiscuss() {
         var firebase = this.get('firebase');
-        console.log(firebase);
-        console.log(this.get('session'))
         var author = firebase.repo.auth.authData_.password.email;
         var newImage = firebase.repo.auth.authData_.password.profileImageURL;
 
@@ -26,14 +24,14 @@ export default Ember.Component.extend({
         authorImage: newImage,
         product: this.get('model.name'),
         price: this.get('model.salePrice'),
-        image: this.get('image') ? this.get('image'):"",
-        description:this.get('description') ? this.get('description'):"",
+        image: this.get('model.thumbnailImage') ? this.get('model.thumbnailImage'):"",
+        description:this.get('model.shortDescription') ? this.get('model.shortDescription'):"",
         category: this.get('category')? this.get('category'):"",
         notes:this.get('notes')? this.get('notes'):"",
         rank: 0,
         date: Date()
       }
-      console.log("first function params" +discussionParams.category);
+      console.log(discussionParams);
       this.sendAction('newDiscuss', discussionParams);
 
     }

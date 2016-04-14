@@ -5,7 +5,7 @@ module.exports = function(environment) {
     modulePrefix: 'day68-ember-two-day',
     environment: environment,
     contentSecurityPolicy: { 'connect-src': "'self' https://auth.firebase.com wss://*.firebaseio.com" },
-    firebase: 'https://shopping-cart-22.firebaseio.com/',
+    firebase: 'https://productcompare.firebaseio.com/',
     torii: { sessionServiceName: 'session'},
     baseURL: '/',
     locationType: 'auto',

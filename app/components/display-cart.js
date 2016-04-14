@@ -10,7 +10,7 @@ export default Ember.Component.extend({
   for(var i = 0; i<this.get('shoppingCart').products.length;i++){
       total = total + this.get('shoppingCart').products[i].salePrice;
   }
-  return total;
+  return total.toFixed(2);
 
 }),
   actions: {

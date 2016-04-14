@@ -1,24 +1,36 @@
-<h2>Your cart:</h2>
-<table>
-  {{#each shoppingCart.products as |product index|}}
-  <tr>
-    <td class="table-data">{{product.name}}</td>
-    <td class="table-data">${{product.salePrice}}</td>
-    <td class="table-data">
-      <form>
-        <button {{action 'removeFromCart' index}}>Remove</button>
-      </form>
-    </td>
+<h2 class="ctr">Your cart:</h2>
+<div class="container">
+  <div class = "row">
+    <div class = 'col-sm-9 flex' >
+      {{#each shoppingCart.products as |product index|}}
 
-  </tr>
-  {{/each}}
-</table>
+        <div class="well center">
+          <h4>{{product.name}}</h4>
+          {{#if product.salePrice}}
+          <h3 class="money">${{product.salePrice}}</h3>
+          {{else}}
+          <h3 class="money">${{product.msrp}}</h3>
+          {{/if}}
+          <img src='{{product.thumbnailImage}}'>
+          <br>
+          <form>
+            <button class = "btn btn-danger"{{action 'removeFromCart' index}}>Remove</button>
+          </form>
+        </div>
+
+
+
+      {{/each}}
+</div>
 <br>
 <br>
-<button {{action 'emptyCart'}} class="btn btn-primary">Empty cart</button>
+<div class = "col-sm-3">
+<button {{action 'emptyCart'}} class = "lg btn btn-danger">Empty cart</button>
 <br>
 <!-- Total: {{total-price shoppingCart.products}} -->
-Total: {{totalCartCost}}
-
+<h1 class = "money">Total: ${{totalCartCost}}</h1>
+    </div>
+  </div>
+</div>
 <br>
 <br>
