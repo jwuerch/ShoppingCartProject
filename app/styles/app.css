@@ -14,7 +14,7 @@
   font-size:35pt;
   font-family:'HelveticaNeuaUltraLight', sans-serif;
   font-weight:300;
-  color:#40576f
+  color:#fff;
 }
 
 .comment-wrap {
@@ -235,8 +235,14 @@ text-shadow: 0 -1px 0 rgba(0, 0, 0, .3);
 
 .h2-row-2 {
   margin: 0 auto;
+  color:#40576f !important;
 }
 
+#row-home-2 {
+  position:relative;
+  top:-235px;
+  color: #40576f;
+}
 .index-row {
   margin-left:25px;
   margin-right:25px;
@@ -249,7 +255,7 @@ text-shadow: 0 -1px 0 rgba(0, 0, 0, .3);
 .above-search-bar-index, .above-search-bar-index-2 {
   margin-left:3px;
   font-family:'ProximaNovaLight', sans-serif;
-  color: #40576F;
+  color: #fff;
   font-size:18pt;
   font-weight:300;
 
@@ -304,15 +310,39 @@ text-shadow: 0 -1px 0 rgba(0, 0, 0, .3);
 
 }
 
+#row-home-2 {
+  margin-top:-50px;
+}
+
 .index-search-bar {
   border-radius:10px;
 }
 
 .jumbotron {
   padding:0px !important;
-  background: #F9F9F9;
+  background-image: url('https://media.giphy.com/media/11p1o3yoAQ7Sne/giphy.gif');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
   height:500px;
+  -moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    filter: FlipH;
+    -ms-filter: "FlipH";
+    border-radius:0 !important;
+    margin-top:10px;
 }
+
+.col-sm-6 {
+  -moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    filter: FlipH;
+    -ms-filter: "FlipH";
+}
+
 
 .product-search-wrap {
   align-items: center;
@@ -503,12 +533,19 @@ text-shadow: 0 -1px 0 rgba(0, 0, 0, .3);
   padding-right:15px;
 }
 
+#shopping-cart-box {
+  border-right:1px solid #d1d1d1;
+}
+
+i:hover {
+  cursor: pointer;
+}
+
 .product-likes {
   border: 1px solid #d1d1d1;
   border-bottom:none;
   height:40px;
   width:50%;
-  padding:7px;
   text-align:center;
   border-left:none;
 }
@@ -638,6 +675,12 @@ text-shadow: 0 -1px 0 rgba(0, 0, 0, .3);
     -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .05);
     box-shadow: inset 0 1px 1px rgba(0, 0, 0, .05);
 }
+.glyphicon-fire{
+  color: orange;
+  margin-left: 70px;
+  position:relative;
+  top:1px;
+}
 
 .money {
   color: green;
@@ -674,4 +717,7 @@ text-shadow: 0 -1px 0 rgba(0, 0, 0, .3);
 
 .margin {
   margin-bottom: 30px;
+}
+.filterDiscussions{
+  margin-bottom: 10px;
 }

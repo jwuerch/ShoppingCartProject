@@ -1,7 +1,9 @@
 <div class="comment-container">
-  <button{{action 'sortByVotes'}}>Sort By Votes</button>
-  <button{{action 'sortByComments'}}>Sort By Comments</button>
-  <button{{action 'sortByDate'}}>Sort By Date</button>
+  <div class="filterDiscussions">
+  <button{{action 'sortByVotes'}} class = "btn btn-info"><span class="fa fa-thumbs-o-up"></span> Votes</button>
+  <button{{action 'sortByComments'}} class = "btn btn-info"><span class="fa fa-comments-o"></span>  Comments</button>
+  <button{{action 'sortByDate'}} class = "btn btn-info"><span class="fa fa-calendar-o"></span> Date</button>
+</div>
 
   {{#each sortedDiscussions as |discussion|}}
   <div class="comment-wrap" style="">
@@ -23,7 +25,7 @@
         <span style="margin-right:15px;">{{#link-to 'discuss' discussion}}{{discussion.comments.length}} comments{{/link-to}}</span>
         <a href="#"{{action "upVote" discussion}}><i class="fa fa-thumbs-up" aria-hidden="true" style="font-size:17px; margin-right:2px;"></i></a>
         <a href="#"{{action "downVote" discussion}}><i class="fa fa-thumbs-down" aria-hidden="true" style="font-size:17px;"></i></a>
-        {{discussion.rank}}
+        {{discussion.rank}}{{discuss-popularity discussion}}
       </div>
     </div>
 
