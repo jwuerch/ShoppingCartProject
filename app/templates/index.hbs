@@ -6,12 +6,22 @@
             <!-- <img src="http://thumbs.dreamstime.com/z/spotted-monster-carrying-shopping-bags-cute-charming-cartoon-purple-big-spots-white-background-35193608.jpg" height='300' width='400' style=""> -->
           </div>
           <div class="col-sm-6 col-sm-offset-6" id="second-column-header" style="float:right;">
+            <h2 class="h2-home">Shop smart - Not hard</h2>
               <div class="above-search-bar-index">
-                Shop smart - Not hard.
+                <p style="font-size:18px;max-width:300px;">Find the best prices on products and what people are saying about them.</p>
               </div>
               <br>
               <br>
+              <br>
+              {{#if session.isAuthenticated}}
+
                 {{product-search productLookup="productLookup"}}
+                {{else}}
+                <div class="form-group-home" style="margin-top:5px;">
+                  <button {{action 'signInTransition'}} class="btn btn-primary home-search-btn" style="margin-right:10px;">Sign-in</button>
+                  <button {{action 'signUpTransition'}} class="btn btn-primary home-search-btn">Register</button>
+                </div>
+                {{/if}}
           </div>
         </div>
 

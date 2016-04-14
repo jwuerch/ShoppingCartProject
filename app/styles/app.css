@@ -10,6 +10,13 @@
   margin: 0 auto;
 }
 
+.h2-home {
+  font-size:35pt;
+  font-family:'HelveticaNeuaUltraLight', sans-serif;
+  font-weight:300;
+  color:#40576f
+}
+
 .comment-wrap {
   height:105px;
   border-bottom:1px solid #d9d9d9;
@@ -261,7 +268,6 @@ text-shadow: 0 -1px 0 rgba(0, 0, 0, .3);
 }
 
 .hp-v5-form {
-  border: 1px solid #E4E9F0;
   border-radius:10px;
   width:300px;
 }
