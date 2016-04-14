@@ -401,6 +401,7 @@ text-shadow: 0 -1px 0 rgba(0, 0, 0, .3);
   display: flex;
   flex-direction:row;
   flex-wrap:nowrap;
+  margin-top:25px;
 }
 
 .sidebar-right {
@@ -419,6 +420,7 @@ text-shadow: 0 -1px 0 rgba(0, 0, 0, .3);
 .img-wrap {
   text-align:center;
   margin-bottom:10px;
+  width:auto;
 
 }
 
@@ -452,6 +454,7 @@ text-shadow: 0 -1px 0 rgba(0, 0, 0, .3);
   flex-direction:row;
   flex-wrap:wrap;
   margin-left:25px;
+  margin-top: -12.5px;
 }
 
 .a-tag-more {
@@ -460,7 +463,6 @@ text-shadow: 0 -1px 0 rgba(0, 0, 0, .3);
 
 .img-wrap {
   height:100px;
-  width:100px;
 }
 
 .sidebar-right {
