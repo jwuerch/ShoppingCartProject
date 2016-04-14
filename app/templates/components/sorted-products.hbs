@@ -1,13 +1,65 @@
+
+{{navbar-api-search}}
+  <div class="container-fluid main">
+<div class="sidebar-left">
+  <div class="filter-widget">
+    <div class="filter-widget-title">
+      <p>Price</p>
+    </div>
+    <div class="price-filter-wrap">
+      <input class="number-low" type="number" placeholder="Min"><span class="price-dash">-</span>
+      <input class="number-high" type="number" placeholder="Max">
+    </div>
+    <button class="price-go-btn">Go</button>
+  </div>
+
+  <div class="filter-widget">
+    <div class="filter-widget-title">
+      <p>Search by category</p>
+      <button {{action 'lowToHigh'}}>Lowest Price First</button>
+      <button {{action 'highToLow'}}>Highest Price First</button>
+      <button {{action 'nameSort'}}>A-Z Sort</button>
+      <button {{action 'storeSort'}}>Store Sort</button>
+
+
+
+    </div>
+    <form action="">
+      <input type="radio"><span class="radio-text"> Electronics</span><br>
+      <input type="radio"><span class="radio-text"> Furniture</span><br>
+      <input type="radio"><span class="radio-text"> Printers</span>
+      <div class="a-tag-more">
+        <a href="#">More...</a>
+      </div>
+    </form>
+  </div>
+
+  <div class="filter-widget">
+    <div class="filter-widget-title">
+      <p>Filter by store</p>
+    </div>
+    <form action="">
+      <input type="checkbox"><span class="radio-text"> Best Buy</span><br>
+      <input{{action 'highToLow'}} type="checkbox"><span class="radio-text"> Amazon</span><br>
+      <input type="checkbox"><span class="radio-text">Walmart</span>
+      <div class="a-tag-more">
+        <a href="#">More...</a>
+      </div>
+    </form>
+  </div>
+
+</div>
+<div class="content">
+
 <div class="container-fluid main">
   <div class="content">
-
-{{#each sortedProducts as |product|}}
+{{#each model.bestBuy as |product|}}
   <div class="product-box">
     <div class="img-wrap">
-      <img src={{product.imageEntities.[0].thumbnailImage}}>
+      <img src={{product.thumbnailImage}}>
     </div>
     <div class="product-store">
-      <em>Best Buy</em>
+      <em>{{store-name product}}</em>
     </div>
     <div class="product-name">
       {{product.name}}
@@ -30,5 +82,7 @@
     </div>
   </div>
 {{/each}}
+</div>
+</div>
 </div>
 </div>

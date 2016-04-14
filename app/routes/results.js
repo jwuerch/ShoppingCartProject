@@ -12,8 +12,11 @@ export default Ember.Route.extend({
       bestBuy: Ember.$.getJSON(bestbuyURL).then(function(responseJSON) {
         console.log(responseJSON.products);
         return responseJSON.products;
-      })
-
+      }),
+      walMart: Ember.$.getJSON(walmartURL).then(function(response) {
+        console.log(response.items);
+        return response.items;
+      }),
     });
   },
   actions: {
@@ -27,6 +30,10 @@ export default Ember.Route.extend({
       var newDiscussion = this.store.createRecord('discuss', params);
       newDiscussion.save();
       this.transitionTo('product', newDiscussion)
-    }
+    },
+    // changeSort(){
+    //   console.log("im running")
+    //   this.set('sortBy', ['salePrice:desc'])
+    // }
   }
 });
