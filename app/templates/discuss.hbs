@@ -1,17 +1,25 @@
-<h1>Welcome to your FULL discussion page</h1>
-<li>{{model.product}}</li>
-<li>{{model.price}}</li>
-<li>{{model.category}}</li>
-<li>{{model.image}}</li>
-<li>{{model.description}}</li>
-<li>{{model.notes}}</li>
-
+<div class = "container">
+<div class = "well">
+<h2>{{model.product}}</h2>
+<h3 class ="money">${{model.price}}</h3>
+<p class = "category">{{model.category}}</p>
+<img src='{{model.image}}'>
+<p>{{model.description}}</p>
+<p>{{model.notes}}</p>
+</div>
+<h2>Reviews About {{model.product}} Below</h2>
 {{new-comment discuss=model saveComment="saveComment"}}
 
 {{#each model.comments as |comment|}}
-<p>Comment: {{comment.content}}</p>
-<p>Author: {{comment.author}}</p>
-<p>Pic: <img class = "authorImage" src='{{comment.authorImage}}'></p>
-
-<hr />
+<div class = "fullComment">
+<div class = "left">
+<p class = "comment"><img class = "authorImage" src='{{comment.authorImage}}'></p>
+<p class = "comment">{{comment.author}}</p>
+</div>
+<div class = "inline">
+<p>'{{comment.content}}'</p>
+</div>
+</div>
+<hr>
 {{/each}}
+</div>

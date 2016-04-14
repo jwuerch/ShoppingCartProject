@@ -1,0 +1,34 @@
+<div class="container-fluid main">
+  <div class="content">
+
+{{#each sortedProducts as |product|}}
+  <div class="product-box">
+    <div class="img-wrap">
+      <img src={{product.imageEntities.[0].thumbnailImage}}>
+    </div>
+    <div class="product-store">
+      <em>Best Buy</em>
+    </div>
+    <div class="product-name">
+      {{product.name}}
+    </div>
+    <div class="product-sale-price">
+      ${{product.salePrice}}
+    </div>
+    <div class="product-likes-and-comments">
+      <div class="product-likes">
+        <div class="thumbs-up-and-down">
+            <i {{action "saveProduct" product}}class="fa fa-cart-plus" aria-hidden="true" style="font-size:24px;"></i>
+          <!-- <div class="thumbs-down-wrap">
+            <i class="fa fa-thumbs-down" aria-hidden="true" style="font-size:18px;"></i>
+          </div> -->
+        </div>
+      </div>
+      <div class="product-comments">
+        {{new-discuss model=product newDiscuss="newDiscuss"}}
+      </div>
+    </div>
+  </div>
+{{/each}}
+</div>
+</div>
