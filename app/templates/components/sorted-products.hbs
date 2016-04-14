@@ -69,14 +69,12 @@
             ${{product.salePrice}}
           </div>
           <div class="product-likes-and-comments">
-            <div class="product-likes">
-              <div class="thumbs-up-and-down">
-                <i {{action "saveProduct" product}}class="fa fa-cart-plus" aria-hidden="true" style="font-size:24px;"></i>
+              <div class="product-comments" id="shopping-cart-box">
+                <i {{action "saveProduct" product}}class="fa fa-cart-plus" aria-hidden="true" style="font-size:24px;position:relative;top:-2px;"></i>
                 <!-- <div class="thumbs-down-wrap">
                 <i class="fa fa-thumbs-down" aria-hidden="true" style="font-size:18px;"></i>
               </div> -->
             </div>
-          </div>
           <div class="product-comments">
             {{new-discuss model=product newDiscuss="newDiscuss"}}
           </div>
