@@ -15,6 +15,18 @@ export default Ember.Component.extend({
     },
     saveProduct(product) {
       this.get('shoppingCart').add(product);
+    },
+    lowToHigh(){
+      this.set('sortBy', ['salePrice:desc'])
+    },
+    highToLow(){
+      this.set('sortBy', ['salePrice:asc'])
+    },
+    nameSort(){
+      this.set('sortBy', ['name:asc'])
+    },
+    storeSort(){
+      this.set('sortBy', ['thumbnailImage:desc'])
     }
   }
 });

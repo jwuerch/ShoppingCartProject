@@ -192,6 +192,18 @@ text-shadow: 0 -1px 0 rgba(0, 0, 0, .3);
   width:300px;
 }
 
+#nav-sign-up{
+  border: 1px solid #E4E9F0;
+  border-radius:10px;
+  width:200px;
+  float: left;
+}
+
+.float {
+    display: inline-block;
+
+}
+
 .index-search-bar {
   border-radius:10px;
 }

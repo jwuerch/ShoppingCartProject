@@ -2,13 +2,13 @@ import Ember from 'ember';
 
 export default Ember.Component.extend({
   actions: {
-    productLookup() {
+    navLookup() {
+      console.log("nav search js")
       var params = {
-        product: this.get('product2')
+        product: this.get('product')
       };
       this.set('product', '')
-
-      this.sendAction('productLookup', params);
+      this.sendAction('navLookup', params);
     }
   }
 });
