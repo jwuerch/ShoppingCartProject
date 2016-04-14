@@ -2,8 +2,13 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
   model() {
-    return this.store.findAll('discuss');
+    return Ember.RSVP.hash({
+      discusses: this.store.findAll('discuss'),
+    });
   },
+  sortBy: ['rank:asc'],
+  sortedDiscusses: Ember.computed.sort('discusses', 'sortBy'),
+
   actions: {
     productLookup(params) {
       this.transitionTo('results', params.product);

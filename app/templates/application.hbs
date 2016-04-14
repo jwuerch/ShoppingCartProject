@@ -15,19 +15,22 @@
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
+          {{#if session.isAuthenticated}}
           <form class="search-form navbar-left" role="search" style="width:200px">
             <div class="form-group search-input-wrap" style="position:relative;top:2.5px;">
               {{nav-search navLookup="navLookup"}}
             </div>
           </form>
+          {{/if}}
           <li class=""><a href="#">HOT DEALS <span class="sr-only">(current)</span></a></li>
           <li><a href="#">DISCUSSIONS</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
           {{#if session.isAuthenticated}}
-          <button class='btn btn-default navbar-btn'{{action 'signOut'}}>
-            {{fa-icon 'sign-out'}} Sign Out
-          </button>
+          <li>{{#link-to 'welcome'}}PROFILE{{/link-to}}</li>
+          <li><a href="#" {{action 'signOut'}}>
+            SIGN OUT
+          </a></li>
           {{else}}
           <li>{{#link-to 'sign-in'}}SIGN-IN{{/link-to}}</li>
           <li>{{#link-to 'sign-up' class=""}}SIGN-UP{{/link-to}}</li>

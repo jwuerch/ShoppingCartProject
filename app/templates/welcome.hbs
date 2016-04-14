@@ -1,9 +1,12 @@
-<div class='page-header'>
-    <h1>Welcome, you are signed in!</h1>
+<div class="container sign-in-container" style="">
+  <div class='page-header' style="width:50%;margin:0 auto;">
+      <h1>Profile Page</h1>
+  </div>
+  <br>
+  <div class='panel panel-default' style="width:50%;margin:0 auto;">
+      <div class='panel-heading'>{{session.currentUser.email}}</div>
+      <div class='panel-body'>
+          <img src='{{session.currentUser.profileImageURL}}' />
+      </div>
+  </div>
 </div>
-<div class='panel panel-default'>
-    <div class='panel-heading'>{{session.currentUser.email}}</div>
-    <div class='panel-body'>
-        <img src='{{session.currentUser.profileImageURL}}' />
-    </div>
-</div>  

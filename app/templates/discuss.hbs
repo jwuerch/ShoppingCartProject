@@ -1,25 +1,25 @@
-<div class = "container">
-<div class = "well">
-<h2>{{model.product}}</h2>
-<h3 class ="money">${{model.price}}</h3>
-<p class = "category">{{model.category}}</p>
-<img src='{{model.image}}'>
-<p>{{model.description}}</p>
-<p>{{model.notes}}</p>
-</div>
-<h2>Reviews About {{model.product}} Below</h2>
-{{new-comment discuss=model saveComment="saveComment"}}
+<div class="container">
+  <div class="well">
+  <h2>{{model.product}}</h2>
+  <h3 class ="money">${{model.price}}</h3>
+  <p class = "category">{{model.category}}</p>
+  <img src='{{model.image}}'>
+  <p>{{model.description}}</p>
+  <p>{{model.notes}}</p>
+  </div>
+  <h2>Reviews About {{model.product}} Below</h2>
+  {{new-comment discuss=model saveComment="saveComment"}}
 
-{{#each model.comments as |comment|}}
-<div class = "fullComment">
-<div class = "left">
-<p class = "comment"><img class = "authorImage" src='{{comment.authorImage}}'></p>
-<p class = "comment">{{comment.author}}</p>
-</div>
-<div class = "inline">
-<p>'{{comment.content}}'</p>
-</div>
-</div>
-<hr>
-{{/each}}
+  {{#each model.comments as |comment|}}
+  <div class = "fullComment">
+  <div class = "left">
+  <p class = "comment"><img class = "authorImage" src='{{comment.authorImage}}'></p>
+  <p class = "comment">{{comment.author}}</p>
+  </div>
+  <div class = "inline">
+  <p>'{{comment.content}}'</p>
+  </div>
+  </div>
+  <hr>
+  {{/each}}
 </div>
