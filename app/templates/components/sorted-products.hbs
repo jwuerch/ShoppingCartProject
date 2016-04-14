@@ -4,10 +4,10 @@
 {{#each sortedProducts as |product|}}
   <div class="product-box">
     <div class="img-wrap">
-      <img src={{product.imageEntities.[0].thumbnailImage}}>
+      <img src={{product.thumbnailImage}}>
     </div>
     <div class="product-store">
-      <em>Best Buy</em>
+      <em>{{store-name product}}</em>
     </div>
     <div class="product-name">
       {{product.name}}

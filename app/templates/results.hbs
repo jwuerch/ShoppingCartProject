@@ -43,41 +43,10 @@
 
 </div>
 <div class="content">
-  {{#each model.walMart as |product|}}
-    <div class="product-box">
-      <div class="img-wrap">
-        <img src={{product.imageEntities.[0].thumbnailImage}}>
-      </div>
-      <div class="product-store">
-        <em>Walmart</em>
-      </div>
-      <div class="product-name">
-        {{product.name}}
-      </div>
-      <div class="product-sale-price">
-        ${{product.salePrice}}
-      </div>
-      <div class="product-likes-and-comments">
-        <div class="product-likes">
-          <div class="thumbs-up-and-down">
-            <div class="thumbs-up-wrap">
-              <i class="fa fa-thumbs-up" aria-hidden="true" style="font-size:18px;"></i>
-            </div>
-            <div class="thumbs-down-wrap">
-              <i class="fa fa-thumbs-down" aria-hidden="true" style="font-size:18px;"></i>
-            </div>
-          </div>
-        </div>
-        <div class="product-comments">
-          {{new-discuss model=product newDiscuss="newDiscuss"}}
-
-        </div>
-      </div>
-    </div>
-  {{/each}}
 
 
-{{sorted-products model=model.bestBuy newDiscuss="newDiscuss"}}
+
+{{sorted-products model=model newDiscuss="newDiscuss"}}
   <!-- {{#each model.bestBuy as |product|}}
     <div class="product-box">
       <div class="img-wrap">
@@ -111,6 +80,6 @@
   {{/each}} -->
 </div>
 
-  <div class="sidebar-right">
-  </div>
+  <!-- <div class="sidebar-right">
+  </div> -->
 </div>
