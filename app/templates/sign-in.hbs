@@ -1,27 +1,32 @@
-<div class='page-header'>
-    <h1>Sign In</h1>
+<div class="container-fluid sign-in-container">
+  <h1>Sign In</h1>
+  <br>
+  <div class="sign-in-up-form">
+    {{input
+        type='text'
+        class='form-control sign-in-form-1'
+        value=email
+        placeholder='email'
+    }}
+    <br>
+    {{input
+        type='password'
+        class='form-control sign-in-form-2'
+        value=password
+        placeholder='password'
+    }}
+  <br>
+  {{#if session.isWorking}}
+      <button class='btn btn-default' disabled='disabled'>
+          {{fa-icon 'spinner' spin=true}} Signing in...
+      </button>
+  {{else}}
+      <button
+          class='btn btn-default'
+          {{action 'signIn' 'password'}} class="home-search-btn" style="float:none;color:#fff;"
+      >
+          {{fa-icon 'sign-in'}} Sign In
+      </button>
+  {{/if}}
 </div>
-{{input
-    type='text'
-    class='form-control'
-    value=email
-    placeholder='email'
-}}
-{{input
-    type='password'
-    class='form-control'
-    value=password
-    placeholder='password'
-}}
-{{#if session.isWorking}}
-    <button class='btn btn-default' disabled='disabled'>
-        {{fa-icon 'spinner' spin=true}} Signing in...
-    </button>
-{{else}}
-    <button
-        class='btn btn-default'
-        {{action 'signIn' 'password'}}
-    >
-        {{fa-icon 'sign-in'}} Sign In
-    </button>
-{{/if}}
+</div>

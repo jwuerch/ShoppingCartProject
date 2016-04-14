@@ -1,21 +1,23 @@
-<div class='page-header'>
-    <h1>Sign Up</h1>
+<div class="container-fluid sign-in-container">
+  <h1>Sign Up</h1>
+  <br>
+  <div class="sign-in-up-form">
+    {{input
+        type='text'
+        class='form-control sign-in-form-1'
+        value=email
+        placeholder='email'
+    }}
+    <br>
+    {{input
+        type='password'
+        class='form-control sign-in-form-2'
+        value=password
+        placeholder='password'
+    }}
+    <br>
+    <button class='home-search-btn' style="float:none;color:#fff;" {{action 'signUp'}}>
+        {{fa-icon 'user-plus'}} Sign Up
+    </button>
+  </div>
 </div>
-{{input
-    type='text'
-    class='form-control'
-    value=email
-    placeholder='email'
-}}
-{{input
-    type='password'
-    class='form-control'
-    value=password
-    placeholder='password'
-}}
-<button
-    class='btn btn-default'
-    {{action 'signUp'}}
->
-    {{fa-icon 'user-plus'}} Sign Up
-</button>  

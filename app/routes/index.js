@@ -21,6 +21,12 @@ export default Ember.Route.extend({
         discussion.set('rank', currentRank);
         discussion.save();
       }
+    },
+    signUpTransition() {
+      this.transitionTo('sign-up');
+    },
+    signInTransition() {
+      this.transitionTo('sign-in');
     }
   }
 });
