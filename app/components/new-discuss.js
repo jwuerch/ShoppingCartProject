@@ -21,12 +21,22 @@ export default Ember.Component.extend({
           newName += splitAuthor[i]
           }
         }
+        this.get('model.thumbnailImage');
+        var imageArr = []
+        imageArr.push(this.get("model.image"));
+        imageArr.push(this.get("model.largeImage"));
+        var imageUrl = imageArr.filter(function(element) {
+          if (element !== undefined) {
+            return element;
+          }
+        })
+        console.log(imageUrl[0]);
       var discussionParams = {
         author: newName,
         authorImage: newImage,
         product: this.get('model.name'),
         price: this.get('model.salePrice'),
-        image: this.get('image') ? this.get('image'):"",
+        image: imageUrl[0],
         description:this.get('description') ? this.get('description'):"",
         category: this.get('category')? this.get('category'):"",
         notes:this.get('notes')? this.get('notes'):"",

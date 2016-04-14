@@ -44,6 +44,19 @@
   margin-right: 10px;
 }
 
+.discussion-container {
+  font-family: sans-serif;
+}
+
+.discussion-header-right {
+  text-align: right;
+}
+
+.discussion-header-left {
+  height: 300px;
+  margin-top:12.5px;
+}
+
 .discussion-notes-span {
   max-height:29px;
   overflow:hidden;
