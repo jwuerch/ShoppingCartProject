@@ -16,8 +16,8 @@
   <div class="filter-widget">
     <div class="filter-widget-title">
       <p>Search by category</p>
-      <button {{action 'lowToHigh'}}>Lowest Price First</button>
-      <button {{action 'highToLow'}}>Highest Price First</button>
+      <button {{action 'lowToHigh'}}>Highest Price First</button>
+      <button {{action 'highToLow'}}>Lowest Price First</button>
       <button {{action 'nameSort'}}>A-Z Sort</button>
       <button {{action 'storeSort'}}>Store Sort</button>
 
@@ -53,7 +53,7 @@
 
 <div class="container-fluid main">
   <div class="content">
-{{#each model.bestBuy as |product|}}
+{{#each sortedProducts as |product|}}
   <div class="product-box">
     <div class="img-wrap">
       <img src={{product.thumbnailImage}}>

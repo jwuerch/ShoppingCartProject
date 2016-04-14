@@ -30,7 +30,8 @@ export default Ember.Component.extend({
         description:this.get('description') ? this.get('description'):"",
         category: this.get('category')? this.get('category'):"",
         notes:this.get('notes')? this.get('notes'):"",
-        rank: 0
+        rank: 0,
+        date: Date()
       }
       console.log("first function params" +discussionParams.category);
       this.sendAction('newDiscuss', discussionParams);
