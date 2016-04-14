@@ -25,6 +25,9 @@ export default Ember.Component.extend({
     nameSort(){
       this.set('sortBy', ['name:asc'])
     },
+    nameSortAlt(){
+      this.set('sortBy', ['name:desc'])
+    },
     storeSort(){
       this.set('sortBy', ['thumbnailImage:desc'])
     }

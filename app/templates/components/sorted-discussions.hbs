@@ -1,0 +1,39 @@
+<div class="comment-container">
+  <button{{action 'sortByVotes'}}>Sort By Votes</button>
+  <button{{action 'sortByComments'}}>Sort By Comments</button>
+  <button{{action 'sortByDate'}}>Sort By Date</button>
+
+  {{#each sortedDiscussions as |discussion|}}
+  <div class="comment-wrap" style="">
+
+    <div class="comment-left" style="">
+      <img id=comment-author-image src="{{discussion.authorImage}}">
+    </div>
+
+    <div class="comment-middle">
+      <div class="comment-content" style="">
+        <div class="author-span"><strong>{{discussion.author}}</strong></div>
+        <br>
+        <span class="product-link-span">{{#link-to 'discuss' discussion}}{{discussion.product}}{{/link-to}}</span>
+        <br>
+        <div class="discussion-notes-span">{{discussion.notes}}</div>
+      </div>
+      <div class="comment-icons" style="">
+        <span class="comment-price"><strong>${{discussion.price}}</strong></span>
+        <span style="margin-right:15px;">{{#link-to 'discuss' discussion}}{{discussion.comments.length}} comments{{/link-to}}</span>
+        <a href="#"{{action "upVote" discussion}}><i class="fa fa-thumbs-up" aria-hidden="true" style="font-size:17px; margin-right:2px;"></i></a>
+        <a href="#"{{action "downVote" discussion}}><i class="fa fa-thumbs-down" aria-hidden="true" style="font-size:17px;"></i></a>
+        {{discussion.rank}}
+      </div>
+    </div>
+
+    <div class="comment-right" style="">
+      <div class="comment-right-top">
+      </div>
+      <div class="comment-right-bottom">
+        {{#link-to 'index'}}<em><a class="category-link" style="color:#999">{{discussion.category}}</a></em>{{/link-to}}
+      </div>
+    </div>
+  </div>
+  {{/each}}
+</div>

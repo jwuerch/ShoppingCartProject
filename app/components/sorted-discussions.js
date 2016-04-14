@@ -1,13 +1,9 @@
 import Ember from 'ember';
 
-export default Ember.Route.extend({
-  model() {
-    return this.store.findAll('discuss');
-  },
-  actions: {
-    productLookup(params) {
-      this.transitionTo('results', params.product);
-    },
+export default Ember.Component.extend({
+  sortBy: ['comments.length:desc'],
+  sortedDiscussions: Ember.computed.sort('model', 'sortBy'),
+  actions:{
     upVote(discussion) {
       var currentRank = discussion.get('rank');
       currentRank++;
@@ -22,11 +18,14 @@ export default Ember.Route.extend({
         discussion.save();
       }
     },
-    signUpTransition() {
-      this.transitionTo('sign-up');
+    sortByVotes() {
+      this.set('sortBy', ['rank:desc']);
     },
-    signInTransition() {
-      this.transitionTo('sign-in');
+    sortByComments() {
+      this.set('sortBy', ['comments.length:desc']);
+    },
+    sortByDate() {
+      this.set('sortBy', ['date:desc']);
     }
   }
 });

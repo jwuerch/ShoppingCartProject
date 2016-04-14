@@ -10,5 +10,6 @@ export default Model.extend({
   image: DS.attr(),
   description: DS.attr(),
   notes: DS.attr(),
-  rank: DS.attr()
+  rank: DS.attr(),
+  date: DS.attr()
 });

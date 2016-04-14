@@ -1,31 +1,18 @@
 
-
-
     <div class="container-fluid">
       <div class="index-search jumbotron">
         <div class="row" style="height:500px;">
           <div class="col-sm-6">
             <!-- <img src="http://thumbs.dreamstime.com/z/spotted-monster-carrying-shopping-bags-cute-charming-cartoon-purple-big-spots-white-background-35193608.jpg" height='300' width='400' style=""> -->
           </div>
-            <div class="col-sm-6 col-sm-offset-6" id="second-column-header">
+          <div class="col-sm-6 col-sm-offset-6" id="second-column-header" style="float:right;">
               <div class="above-search-bar-index">
-                <p style="max-width:400px;">Find the best prices on products and find out what people are saying about them.</p>
+                Shop smart - Not hard.
               </div>
               <br>
               <br>
-              <br>
-              <br>
-              {{#if session.isAuthenticated}}
-              <div class="home-buttons">
                 {{product-search productLookup="productLookup"}}
-              </div>
-              {{else}}
-              <div class="home-buttons" style="float:left;">
-                <button style="margin-top:10px;margin-right:10px;background:" class="btn btn-primary home-search-btn" {{action 'signInTransition' }}>Sign-in</button>
-                <button style="margin-top:10px;" class="btn btn-primary home-search-btn" {{action 'signUpTransition' }}>Register</button>
-              </div>
-              {{/if}}
-            </div>
+          </div>
         </div>
 
 
@@ -41,43 +28,11 @@
     <div class="col-sm-12" style="">
 
 
-      <div class="above-search-bar-index-2 h2-row-2" style="text-align:center">Hottest discussions</div>
+      <div class="above-search-bar-index-2 h2-row-2">Product discussions!</div>
       <br>
-      <div class="comment-container">
-        {{#each model as |discussion|}}
-        <div class="comment-wrap" style="">
-
-          <div class="comment-left" style="">
-            <img id=comment-author-image src="{{discussion.authorImage}}">
-          </div>
-
-          <div class="comment-middle">
-            <div class="comment-content" style="">
-              <div class="author-span"><strong>{{discussion.author}}</strong></div>
-              <br>
-              <span class="product-link-span">{{#link-to 'discuss' discussion}}{{discussion.product}}{{/link-to}}</span>
-              <br>
-              <div class="discussion-notes-span">{{discussion.notes}}</div>
-            </div>
-            <div class="comment-icons" style="">
-              <span class="comment-price"><strong>${{discussion.price}}</strong></span>
-              <span style="margin-right:15px;">{{#link-to 'discuss' discussion}}{{discussion.comments.length}} comments{{/link-to}}</span>
-              <a href="#"{{action "upVote" discussion}}><i class="fa fa-thumbs-up" aria-hidden="true" style="font-size:17px; margin-right:2px;"></i></a>
-              <a href="#"{{action "downVote" discussion}}><i class="fa fa-thumbs-down" aria-hidden="true" style="font-size:17px;"></i></a>
-              {{discussion.rank}}
-            </div>
-          </div>
-
-          <div class="comment-right" style="">
-            <div class="comment-right-top">
-            </div>
-            <div class="comment-right-bottom">
-              {{#link-to 'index'}}<em><a class="category-link" style="color:#999">{{discussion.category}}</a></em>{{/link-to}}
-            </div>
-          </div>
-        </div>
-        {{/each}}
-      </div>
+      <br>
+      <br>
+{{sorted-discussions model=model}}
     </div>
   </div>
 </div>
