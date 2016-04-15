@@ -1,19 +1,12 @@
-<div class="container sign-in-container" style="text-align:none;">
-<h1>Start a discusison about this product</h1>
-
-<li>{{model.product}}</li>
-<li>{{model.price}}</li>
+<div class="container">
+  <div class="well center">
+  <h2>{{model.product}}</h2>
+  <h3 class ="money">${{model.price}}</h3>
+  <p class = "category">{{model.category}}</p>
+  <img class = 'circlePic mainPic' src='{{model.image}}'>
+  <p>{{model.description}}</p>
+  <p>{{model.notes}}</p>
+  </div>
 
 {{update-discussion updateDiscuss="updateDiscuss" discuss=model}}
 </div>
-
-
-<!-- {{new-comment discuss=model saveComment="saveComment"}}
-
-{{#each model.comments as |comment|}}
-<p>Comment: {{comment.content}}</p>
-<p>Author: {{comment.author}}</p> -->
-<!-- <p>Pic: {{userImage}}</p> -->
-
-<!-- <hr />
-{{/each}} -->

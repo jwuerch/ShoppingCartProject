@@ -31,6 +31,10 @@
 .comment-wrap:hover {
   background:#eff1f5;
 }
+.textArea{
+height: 100px;
+width: 100%;
+}
 
 .comment-middle {
   min-width: 79%;
@@ -660,6 +664,15 @@ i:hover {
   color:#666;
 }
 
+.flex {
+  display:flex;
+  flex-direction:row;
+  flex-wrap:wrap;
+}
+
+
+
+
 .discussion {
   border: 1px solid black;
 }
@@ -669,12 +682,21 @@ i:hover {
   width: 50px;
   border-radius: 80%;
 }
+.ctr{
+  text-align: center;
+  font-size: 60px;
+  color: #99d6ff;
+}
+
+.lg{
+font-size: 35px;
+}
 
 .selectpicker {
    width: 240px;
    height: 34px;
    overflow: hidden;
-   background: url('http://bavotasan.com/wp-content/uploads/2011/05/down_arrow_select.jpg') no-repeat right #ddd;
+   background: #99d6ff;
    border: 1px solid #ccc;
    }
 
@@ -733,4 +755,19 @@ i:hover {
 }
 .filterDiscussions{
   margin-bottom: 10px;
+}
+
+.center {
+  text-align: center;
+  margin-right:25px;
+  flex-wrap:wrap;
+}
+
+.circlePic{
+  border-radius: 70%;
+}
+
+.mainPic {
+  height: 130px;
+  width: 130px;
 }
