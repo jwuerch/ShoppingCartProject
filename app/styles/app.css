@@ -1,3 +1,25 @@
+.searchBtn {
+  height: 150px;
+  width: 150px;
+  font-size: 40px;
+  margin-top: 20px;
+}
+.font{
+  color: #2fb62f;
+}
+.font2{
+  color: #66a3ff;
+}
+.font3{
+  color: #bfff00;
+}
+
+.box {
+  background-color: #00BAFF;
+  /*opacity: .8;*/
+  border-radius: 25px;
+  text-align: center;
+}
 .fa-shopping-cart {
   font-size: 40px !important;
   position: relative;
