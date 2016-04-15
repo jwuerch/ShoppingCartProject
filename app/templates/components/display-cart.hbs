@@ -14,7 +14,11 @@
           {{else}}
           <h3 class="money">${{product.price}}</h3>
           {{/if}}
-          <img src='{{product.thumbnailImage}}'> <img src="{{product.image}}"/>
+          {{#if product.thumbnailImage}}
+          <img src='{{product.thumbnailImage}}'>
+          {{else}}
+          <img src="{{product.image}}" height = '150' width='150'/>
+          {{/if}}
           <hr />
           <form>
             <button class = "btn btn-danger"{{action 'removeFromCart' index}}>Remove</button>
