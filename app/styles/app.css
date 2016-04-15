@@ -761,6 +761,8 @@ font-size: 35px;
   text-align: center;
   margin-right:25px;
   flex-wrap:wrap;
+  width: 200px;
+  height: auto;
 }
 
 .circlePic{

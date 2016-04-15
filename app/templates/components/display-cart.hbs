@@ -12,14 +12,11 @@
           <h3 class="money">${{product.msrp}}</h3>
           {{/if}}
           <img src='{{product.thumbnailImage}}'>
-          <br>
+          <hr />
           <form>
             <button class = "btn btn-danger"{{action 'removeFromCart' index}}>Remove</button>
           </form>
         </div>
-
-
-
       {{/each}}
 </div>
 <br>
