@@ -1,48 +1,50 @@
-<div class="container discussion-container" style="border: 1px solid black;">
+<div class="container discussion-container">
   <div class="row">
-    <div class="discussion-header-left col-xs-6" style="border: 1px solid black;">
-      <h3 class ="money" style="border: 1px solid black;">${{model.price}}</h3>
-      <p class = "category" style="border: 1px solid black;">{{model.category}}</p>
+    <p class="category">Category > {{model.category}}</p>
 
-      <img src='{{model.image}}'>
-      <p style="border: 1px solid black;">{{model.description}}</p>
-      <p style="border: 1px solid black;">{{model.notes}}</p>
+  </div>
+  <div class="row">
+    <div class="discussion-header-left col-xs-6">
+      <div class="discussion-image">
+        <img src='{{model.image}}'>
+      </div>
     </div>
 
-    <div class="discussion-header-right col-xs-6" style="border: 1px solid black;">
-
-      {{model.author}}
-
+    <div class="discussion-header-right col-xs-6">
+      <h3>{{model.product}}</h3>
+      <p>{{model.description}}</p>
+      <h3 class ="money">${{model.price}}</h3>
+      <br>
+      <button type="btn btn-default" name="button">Add To Cart</button>
     </div>
   </div>
-  <h2 style="border: 1px solid black;">Reviews About {{model.product}} Below</h2>
-  {{new-comment discuss=model saveComment="saveComment"}}
+  <div class="row-author">
+    <strong>Discussion started by {{model.author}}:</strong>
+    <div class="discussion-author-notes">
+      <div class="author-image">
+        <img src='{{model.authorImage}}'>
+      </div>
+      {{model.notes}}
+    </div>
+
+  </div>
+  <br>
+  <br>
+  <div class="new-comment">
+    <h4>Add to the discussion about {{model.product}} below:</h4>
+    {{new-comment discuss=model saveComment="saveComment"}}
+  </div>
 
   {{#each model.comments as |comment|}}
-  <div class = "fullComment" style="border: 1px solid black;">
-  <div class = "left" style="border: 1px solid black;">
-  <p class = "comment"><img class = "authorImage" src='{{comment.authorImage}}'></p>
-  <p class = "comment">{{comment.author}}</p>
-  </div>
-  <div class = "inline">
-  <p style="border: 1px solid black;">{{comment.content}}</p>
-  </div>
+  <div class = "fullComment">
+    <div class = "fullComment-left">
+      <p class = "comment"><img class = "authorImage" src='{{comment.authorImage}}'></p>
+      <p class = "fullComment-author">{{comment.author}}</p>
+    </div>
+    <div class = "fullComment-inline">
+      <p>{{comment.content}}</p>
+    </div>
   </div>
   <hr>
-  {{/each}}
-</div>
-
-<div class="comment-container">
-  {{#each sortedDiscussions as |discussion|}}
-  <div class="comment-wrap" style="border: 1px solid black;">
-
-    <div class="comment-left" style="border: 1px solid black;">
-      <img id=comment-author-image src="{{discussion.authorImage}}" style="border: 1px solid black;">
-    </div>
-
-
-
-
-  </div>
   {{/each}}
 </div>
