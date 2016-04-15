@@ -6,12 +6,15 @@
 
         <div class="well center">
           <h4>{{product.name}}</h4>
+          <h4>{{product.product}}</h4>
           {{#if product.salePrice}}
           <h3 class="money">${{product.salePrice}}</h3>
-          {{else}}
+          {{else if}}
           <h3 class="money">${{product.msrp}}</h3>
+          {{else}}
+          <h3 class="money">${{product.price}}</h3>
           {{/if}}
-          <img src='{{product.thumbnailImage}}'>
+          <img src='{{product.thumbnailImage}}'> <img src="{{product.image}}"/>
           <hr />
           <form>
             <button class = "btn btn-danger"{{action 'removeFromCart' index}}>Remove</button>

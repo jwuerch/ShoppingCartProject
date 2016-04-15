@@ -15,7 +15,7 @@
       <p>{{model.description}}</p>
       <h3 class ="money">${{model.price}}</h3>
       <br>
-      <button type="btn btn-default" name="button">Add To Cart</button>
+      <button class="btn btn-lg btn-success" name="button"{{action 'saveProduct' model}}><span class=" fa fa-cart-plus"></span></button>
     </div>
   </div>
   <div class="row-author">

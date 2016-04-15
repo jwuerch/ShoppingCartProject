@@ -1,6 +1,8 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
+  shoppingCart: Ember.inject.service(),
+
   model(params) {
     return this.store.findRecord('discuss', params.discuss_id);
   },
@@ -14,6 +16,10 @@ export default Ember.Route.extend({
       newComment.save().then(function () {
         return discuss.save();
       });
-    }
+    },
+    saveProduct(product) {
+      this.get('shoppingCart').add(product);
+      console.log("hey");
+    },
   }
 });
