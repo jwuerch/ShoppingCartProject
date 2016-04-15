@@ -53,12 +53,16 @@ width: 100%;
 }
 
 .author-image img{
+  height: 70px;
+  width: 70px;
   padding: 10px;
+  float: left;
 }
 
 .discussion-header-right {
-  text-align: right;
+  text-align: left;
   margin-top: 12.5px;
+
 }
 
 .discussion-image {
@@ -69,25 +73,31 @@ width: 100%;
 .discussion-header-left {
   height: 300px;
   margin-top:12.5px;
+  width:300px;
 }
 
 .discussion-header-left img{
   height: 300px;
   margin-top:12.5px;
+  width:300px;
 }
 
-.discussion-author-notes {
-  display: inline;
+.new-comment {
+  display:block;
+}
+
+.row-author {
+  margin-top: 25px;
   font-size: 14pt;
 }
 
-.discussion-author-notes p{
-  display: inline;
-  font-size: 12pt;
+.discussion-author-notes{
+
+  font-size: 10pt;
 }
 
 .discussion-author-notes img{
-  float:right;
+  flex-direction: flex-start;
   padding-right: 20px;
 }
 

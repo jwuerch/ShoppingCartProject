@@ -18,18 +18,22 @@
       <button type="btn btn-default" name="button">Add To Cart</button>
     </div>
   </div>
-  <div class="row">
+  <div class="row-author">
+    <strong>Discussion started by {{model.author}}:</strong>
     <div class="discussion-author-notes">
-      Discussion started by {{model.author}}:
       <div class="author-image">
         <img src='{{model.authorImage}}'>
       </div>
-      <p>{{model.notes}}</p>
+      {{model.notes}}
     </div>
 
   </div>
-  <h4>Add to the discussion about {{model.product}} below</h4>
-  {{new-comment discuss=model saveComment="saveComment"}}
+  <br>
+  <br>
+  <div class="new-comment">
+    <h4>Add to the discussion about {{model.product}} below:</h4>
+    {{new-comment discuss=model saveComment="saveComment"}}
+  </div>
 
   {{#each model.comments as |comment|}}
   <div class = "fullComment">
