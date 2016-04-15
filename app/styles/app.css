@@ -1,3 +1,41 @@
+.searchBtn {
+  height: 150px;
+  width: 150px;
+  font-size: 40px;
+  margin-top: 20px;
+}
+.font{
+  color: #2fb62f;
+  background:#f9f9f9;
+  border:1px solid #d1d1d1;
+  box-shadow:rgba(0,0,0, 0.0980392) 0px 0px 2px 1px;
+}
+
+
+.font2{
+  color: #66a3ff;
+  background:#f9f9f9;
+  border:1px solid #d1d1d1;
+  box-shadow:rgba(0,0,0, 0.0980392) 0px 0px 2px 1px;
+}
+.font3{
+  color: #BFFG64;
+  background:#f9f9f9;
+  border:1px solid #d1d1d1;
+  box-shadow:rgba(0,0,0, 0.0980392) 0px 0px 2px 1px;
+}
+
+.searchBtn:hover {
+  box-shadow:rgba(0,0,0, 0.0980392) 0px 0px 12px 1px;
+  transition:.5s;
+}
+
+.box {
+  border-radius: 25px;
+  font-size:20px;
+  font-size:20px;
+  max-width:450px;
+}
 .fa-shopping-cart {
   font-size: 40px !important;
   position: relative;
@@ -290,6 +328,10 @@ text-shadow: 0 -1px 0 rgba(0, 0, 0, .3);
   position: relative;
   top: 50%;
   transform: translateY(-50%);
+  opacity:.95;
+  float:right;
+  position:
+  relative;top:-300px;
 }
 
 .hp-form {
@@ -454,6 +496,10 @@ text-shadow: 0 -1px 0 rgba(0, 0, 0, .3);
   transform: translateY(-50%);
 }
 
+.newCenter {
+  text-align: center;
+}
+
 .search-input-wrap {
   margin-top: 6.25px;
 }
@@ -496,6 +542,7 @@ text-shadow: 0 -1px 0 rgba(0, 0, 0, .3);
   padding:15px;
   box-shadow: rgba(0,0,0, 0.0980392) 0px 3px 12px 1px;
   background:#fff;
+  padding-left:23px;
 }
 
 .index-row-1 {
@@ -715,6 +762,7 @@ i:hover {
   font-weight:700;
   font-family: arial, sans-serif;
   font-size:13px;
+  text-align:center;
 }
 
 .radio-text {

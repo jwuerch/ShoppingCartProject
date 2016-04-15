@@ -1,3 +1,4 @@
+<div class="cart-wrap">
 <h2 class="ctr">Your cart:</h2>
 <div class="container">
   <div class = "row">
@@ -6,12 +7,19 @@
 
         <div class="well center">
           <h4>{{product.name}}</h4>
+          <h4>{{product.product}}</h4>
           {{#if product.salePrice}}
           <h3 class="money">${{product.salePrice}}</h3>
-          {{else}}
+          {{else if}}
           <h3 class="money">${{product.msrp}}</h3>
+          {{else}}
+          <h3 class="money">${{product.price}}</h3>
           {{/if}}
+          {{#if product.thumbnailImage}}
           <img src='{{product.thumbnailImage}}'>
+          {{else}}
+          <img src="{{product.image}}" height = '150' width='150'/>
+          {{/if}}
           <hr />
           <form>
             <button class = "btn btn-danger"{{action 'removeFromCart' index}}>Remove</button>
@@ -31,3 +39,4 @@
 </div>
 <br>
 <br>
+</div>
