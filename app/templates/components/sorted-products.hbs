@@ -1,6 +1,7 @@
 
 {{navbar-api-search}}
-<div class="container-fluid main">
+<div class="results-wrap" style="background:#f9f9f9;">
+<div class="container-fluid main" style="background:#f9f9f9;">
   <div class="sidebar-left">
 
     <div class="filter-widget">
@@ -54,6 +55,7 @@
 
     <div class="container-fluid main">
       <div class="content">
+        {{#if sortedProducts.[0]}}
         {{#each sortedProducts as |product|}}
         <div class="product-box">
           <div class="img-wrap">
@@ -81,7 +83,11 @@
         </div>
       </div>
       {{/each}}
+      {{else}}
+      <h4>Please redefine your search results.</h4>
+      {{/if}}
     </div>
   </div>
+</div>
 </div>
 </div>

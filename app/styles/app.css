@@ -48,6 +48,17 @@ width: 100%;
   margin-right: 10px;
 }
 
+footer {
+  background:#333;
+  height: 300px;
+  border-top-left-radius:15px;
+  border-top-right-radius: 15px;
+}
+
+.results-wrap {
+  padding-bottom: 25px;
+}
+
 .discussion-container {
   font-family: sans-serif;
 }
@@ -62,7 +73,6 @@ width: 100%;
 .discussion-header-right {
   text-align: left;
   margin-top: 12.5px;
-
 }
 
 .discussion-image {
@@ -74,6 +84,7 @@ width: 100%;
   height: 300px;
   margin-top:12.5px;
   width:300px;
+  padding: 10px;
 }
 
 .discussion-header-left img{
@@ -87,7 +98,7 @@ width: 100%;
 }
 
 .row-author {
-  margin-top: 25px;
+  margin-top: 45px;
   font-size: 14pt;
 }
 
@@ -293,6 +304,7 @@ text-shadow: 0 -1px 0 rgba(0, 0, 0, .3);
 .h2-row-2 {
   margin: 0 auto;
   color:#40576f !important;
+  margin-top: 20px;
 }
 
 #row-home-2 {
@@ -483,6 +495,7 @@ text-shadow: 0 -1px 0 rgba(0, 0, 0, .3);
   min-width:200px;
   padding:15px;
   box-shadow: rgba(0,0,0, 0.0980392) 0px 3px 12px 1px;
+  background:#fff;
 }
 
 .index-row-1 {
@@ -508,13 +521,18 @@ text-shadow: 0 -1px 0 rgba(0, 0, 0, .3);
 .container-fluid {
   padding: 0;
 }
+
+#ember532 {
+  background:#f9f9f9;
+}
 .main {
   padding-left:25px;
   padding-right:25px;
   display: flex;
   flex-direction:row;
   flex-wrap:nowrap;
-  margin-top:25px;
+  padding-top:25px;
+  margin-right:0 !important;
 }
 
 .sidebar-right {
@@ -560,6 +578,7 @@ text-shadow: 0 -1px 0 rgba(0, 0, 0, .3);
   margin-bottom:20px;
   font-family: "Open Sans Semibold", "Open Sans", Arial, sans-serif;
   font-size:11.5px;
+  background: #fff;
 }
 
 .content {
@@ -585,9 +604,10 @@ text-shadow: 0 -1px 0 rgba(0, 0, 0, .3);
 
 .product-name {
   border-bottom: 1px solid #d1d1d1;
-  height:70px;
+  height:68px;
   padding-left:15px;
   padding-right:15px;
+  overflow:hidden;
 }
 
 #shopping-cart-box {
